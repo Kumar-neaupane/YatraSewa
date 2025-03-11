@@ -1,0 +1,185 @@
+.searchItem {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    background-color: white;
+  }
+  
+  .searchItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .siImg {
+    width: 240px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .siDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+    padding: 5px 0;
+  }
+  
+  .siTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003366;
+    margin: 0 0 5px 0;
+  }
+  
+  .siTags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 5px;
+  }
+  
+  .siDistance {
+    font-size: 13px;
+    color: #555;
+    background-color: #f0f7ff;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-weight: 500;
+  }
+  
+  .siTaxiOp {
+    font-size: 13px;
+    background-color: #e6f7e6;
+    color: #2e7d32;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 15px;
+  }
+  
+  .siSubtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .siFeatures {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .siCancelContainer {
+    margin-top: 10px;
+    background-color: #f2fcf2;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid #4CAF50;
+  }
+  
+  .siCancelOp {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2e7d32;
+    display: block;
+  }
+  
+  .siCancelOpSubtitle {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 3px;
+  }
+  
+  .siDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .siRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .siRatingText {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .siRatingNumber {
+    background-color: #003366;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  .siDetailTexts {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 5px;
+  }
+  
+  .siPrice {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .siTaxOp {
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .siCheckButton {
+    background: #ff7043;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 112, 67, 0.3);
+  }
+  
+  .siCheckButton:hover {
+    background: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 112, 67, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .searchItem {
+      flex-direction: column;
+      padding: 15px;
+    }
+    
+    .siImg {
+      width: 100%;
+      height: 200px;
+    }
+    
+    .siDetails {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .siDetailTexts {
+      text-align: left;
+    }
+  }

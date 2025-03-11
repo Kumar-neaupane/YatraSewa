@@ -5,7 +5,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import { useLocation } from "react-router-dom";
-
+import Searchitem from "../../components/searchitem/Searchitem";
 function List() {
   const location = useLocation();
   
@@ -98,7 +98,14 @@ function List() {
           </div>
           
           <div className="listResult">
-            {/* Search results will go here */}
+          <Searchitem />
+          <Searchitem />
+          <Searchitem />
+          <Searchitem />
+          <Searchitem />
+          <Searchitem />
+          <Searchitem />
+            
           </div>
         </div>
       </div>

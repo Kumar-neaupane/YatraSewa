@@ -12,7 +12,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { format } from "date-fns";
-import { useNavigate } from "react-router-dom"; // ✅ Fixed: Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [destination, setDestination] = useState("");
@@ -31,7 +31,7 @@ const Header = () => {
     room: 1,
   });
 
-  const navigate = useNavigate(); // ✅ Fixed: Moved inside the component
+  const navigate = useNavigate(); 
 
   const handleOption = (name, operation) => {
     setOptions((prev) => ({
@@ -100,7 +100,7 @@ const Header = () => {
                 moveRangeOnFirstSelection={false}
                 ranges={date}
                 className="date"
-                minDate={new Date()} // ✅ Fixed: Corrected newDate() to new Date()
+                minDate={new Date()} 
               />
             )}
           </div>
