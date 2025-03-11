@@ -1,0 +1,105 @@
+.featured {
+    width: 100%;
+    max-width: 1224px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .featuredItem {
+    position: relative;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 320px;
+    flex: 1;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .featuredItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featuredItem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    z-index: 1;
+  }
+  
+  .featuredImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .featuredItem:hover .featuredImg {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .featuredTitles {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+  }
+  
+  .featuredItem:hover .featuredTitles {
+    transform: translateY(-5px);
+  }
+  
+  .featuredTitles h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .featuredTitles h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FF6B35;
+  }
+  
+  .featuredBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #FF6B35;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media screen and (max-width: 992px) {
+    .featured {
+      margin: 40px 20px;
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .featured {
+      flex-direction: column;
+    }
+    
+    .featuredItem {
+      height: 250px;
+    }
+  }

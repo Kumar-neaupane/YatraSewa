@@ -1,0 +1,137 @@
+
+.plist-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .plist {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .plistItem {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+  }
+  
+  .plistItem:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .plistImg {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .plistItem:hover .plistImg {
+    transform: scale(1.05);
+  }
+  
+  .plistTitles {
+    padding: 15px;
+  }
+  
+  .plistTitles > h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .plistTitles > h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e74c3c;
+    margin: 0;
+  }
+  
+  .plistItem:hover .plistTitles > h1 {
+    color: #0071c2;
+  }
+  
+  .nav-button {
+    position: absolute;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .nav-button:focus {
+    outline: none;
+  }
+  
+  .prev-button {
+    left: -20px;
+  }
+  
+  .next-button {
+    right: -20px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .plist {
+      gap: 15px;
+    }
+    
+    .plistImg {
+      height: 150px;
+    }
+    
+    .nav-button {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .plist-container {
+      padding: 10px 0;
+    }
+    
+    .plist {
+      gap: 10px;
+    }
+    
+    .plistTitles > h1 {
+      font-size: 16px;
+    }
+    
+    .plistTitles > h2 {
+      font-size: 12px;
+    }
+  }
